@@ -1,4 +1,3 @@
-" Test Change feature Branch
 " Vim configuration file
 
 " Vim plug
@@ -25,7 +24,7 @@ syntax on
 set number
 
 "highlight current line "
-set cursorline
+" set cursorline
 :highlight Cursorline cterm=bold ctermbg=black
 
 " When using a macro that has to redraw the screen for every action. much much faster
@@ -57,7 +56,7 @@ endif
 set termguicolors
 
 " Vim colorscheme
-colorscheme habamax
+" colorscheme habamax
 
 " need to find the exact comment before adding
 let @/ = ""
