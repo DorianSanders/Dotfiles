@@ -227,6 +227,7 @@ if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     export LS_COLORS="$LS_COLORS:ow=30;44:" # fix ls color for folders with 777 permissions
 
+    alias vim='nvim'
     alias ls='ls --color=auto'
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
@@ -254,6 +255,7 @@ fi
 
 
 # some more ls aliases
+# alias vim ='nvim'
 alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
@@ -274,4 +276,4 @@ if [ -f /etc/zsh_command_not_found ]; then
 fi
 
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/oracle/19.6/client/lib/
-export PATH=/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/home/fredruns/.dotnet/tools:/home/fredruns/.local/bin
+export PATH=$PATH:/opt/nvim-linux64/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/home/fredruns/.dotnet/tools:/home/fredruns/.local/bin
