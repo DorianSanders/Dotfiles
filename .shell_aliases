@@ -1,0 +1,38 @@
+# Aliases
+
+# git 
+alias gs='git status'
+alias gb='git branch'
+alias ga='git add'
+alias gco='git commit'
+alias gch='git checkout'
+alias gp='git push'
+alias gl='git log'
+alias gsh='git show'
+
+# docker 
+alias dc='docker-compose'
+alias dcp='docker-compose --profile testing up --build'
+alias dcb='docker-compose up --build'
+alias dstop='docker stop $(docker ps -aq)' # stop all running containers
+alias drmiall='docker rmi $(docker images -q)' # remove all images -q selects the Image ID
+alias drmi='docker rmi' # to remove a specific image
+alias drm='docker rm $(docker ps -aq)' # remove all container
+alias dpruneall='docker container prune -f && docker image prune -a -f && docker volume prune -f && docker network prune -f && docker system prune -a -f'
+
+
+# transfer data from clipboard to terminal
+alias pbcopy='xsel --input --clipboard'
+alias pbpaste='xsel --output --clipboard'
+
+# show complete history
+alias history="history 0"
+
+# hacking
+alias feroxbuster="sudo docker run --init -v ~/.config/feroxbuster:/root/.config/feroxbuster -i epi052/feroxbuster"
+alias rustscan='docker run -it --rm --name rustscan rustscan/rustscan:2.1.1'
+alias mscanz='sudo masscan -p1-65535,U:1-65535 $1 --rate=1000 -e tun0 --wait 5 > mscan.txt'
+alias nmapz='/home/fredruns/Github/Scripts/gen_nmap.py; while read item; do sudo nmap -sV -sC -sU -sS $item; done < nmap.txt; rm mscan.txt nmap.txt'
+
+# more
+alias vim='nvim'
